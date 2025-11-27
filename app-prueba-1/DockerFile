@@ -5,7 +5,7 @@ EXPOSE 10000
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["app-prueba-1.csproj", "./"]
-RUN dotnet restore "app-prueba-1.csproj
+RUN dotnet restore "app-prueba-1.csproj"
 COPY . .
 RUN dotnet build "app-prueba-1.csproj" -c Release -o /app/build
 
